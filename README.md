@@ -1,16 +1,38 @@
 # CQ-Cloud
 
 ## Commandes : 
-- composer install
+`composer install`
 
-- php artisan serve (start a development server at https://localhost:8000)
-- php artisan list  (see list of all commands)
-- php artisan make:controller <controllerName>
-- php artisan make:model <modelName>
-- php artisan route:list (get routing list)
-php artisan make:model User
+> start a development server at https://localhost:8000 
 
+`php artisan serve`
+
+> see list of all commands
+
+`php artisan list`
+
+`php artisan make:controller <controllerName> --resource --model:<modelName>`
+
+`php artisan make:model <modelName>`
+
+> get routing list
+
+`php artisan route:list`
+
+`php artisan make:model User`
+
+```
+bloc code
+```
 
 ## Configuration BDD :
-- php artisan migrate:install 
-- php artisan migrate
+
+`php artisan migrate:install`
+
+`php artisan migrate:refresh`
+
+`php artisan migrate`
+
+> Création d'une nouvelle table dans la BDD
+
+`php artisan make:migration create_users_table --create=users`

@@ -11,12 +11,21 @@
 |
 */
 
+// Route for USER
+Route::resource('user', 'UserController');
+Route::get('user', 'UserController@index')
+    ->name('user.index');
+Route::get('user/user{id}/edit', 'UserController@edit')
+    ->name('user.edit');
+Route::get('user/profile', 'UserController@profile')
+    ->name('user.profile');
+Route::get('user/{user}/destroy', 'UserController@destroyForm');
+//TODO : ajouter un middleware pour la sécurisation des routes
+
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')
+    ->name('home');
+Route::get('/', 'HomeController@index')
+    ->name('home');
 
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

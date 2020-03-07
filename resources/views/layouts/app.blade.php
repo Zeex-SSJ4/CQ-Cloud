@@ -37,6 +37,15 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
+                <!-- Left Side Of Navbar -->
+                <ul class="navbar-nav ml-auto">
+                    @guest
+
+                    @else
+
+                    @endguest
+                </ul>
+
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">
                     <!-- Authentication Links -->
@@ -56,8 +65,8 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="">
-                                Profil
+                            <a class="dropdown-item" href="{{ route('user.profile')}}">
+                                Profile
                             </a>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
